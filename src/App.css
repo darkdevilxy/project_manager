@@ -1,0 +1,14 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.app_layout{
+    display: grid;
+    grid-template-rows: auto auto;
+
+}
+.main_content{
+    display: grid;
+    grid-template-columns:auto auto;
+
+}

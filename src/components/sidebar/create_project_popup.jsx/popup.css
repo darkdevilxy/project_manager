@@ -44,7 +44,7 @@
 }
 
 .title_bar{
-    background-color: whitesmoke;
+    background-color:  rgba(233, 214, 214, 0.8);
     border-bottom: 1px solid darkgray;
     display: flex;
     padding: 2%;
@@ -61,5 +61,6 @@
     margin-bottom: 0px;
     padding: 3%;
     border: none;
-    border-top: 1px solid darkgray
+    border-top: 1px solid darkgray;
+    background-color:  rgba(233, 214, 214, 0.8);
 }

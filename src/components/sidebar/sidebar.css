@@ -1,4 +1,36 @@
+.sidebar{
+    margin: 0;
+    padding: 0;
+    background-color:  rgba(214, 189, 189, 0.8);
+}
+.header{
+    background-color: blue;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 0 1.5em 0 1.5em;
+
+}
+.top_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    background-color: red;
+}
+.top_section > button {
+    background-color: green;
+    border: none;
+}
+.top_section>button>img{
+}
 .content{
-    list-style: none;
-    padding-left: 0%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+}
+.bottom_section{
+text-align: center;
+background-color: yellow;
 }

@@ -1,6 +1,9 @@
 import { collection, doc,deleteDoc, getFirestore } from 'firebase/firestore';
 import { useFirestoreCollectionData } from 'reactfire';
 
+import edit from './../../assets/edit.svg'
+import add from './../../assets/plus.svg'
+
 import './sidebar.css'
 
 import Smallcards from './small_cards/small_cards';
@@ -32,17 +35,21 @@ export default function Sidebar() {
                     Projects
                 </div>
                 <div className="top_section">
-                    <button onClick={create_record} className="new">New</button>
-                    <button onClick={() => delete_record("Test2")} className="edit">Edit</button>
+                    <button onClick={create_record} className="new">
+                        <img src={add} alt="Add" />
+                    </button>
+                    <button onClick={() => delete_record("Test2")} className="edit">
+                        <img src={edit} alt="" />
+                    </button>
                 </div>
-                <ul className="content">
+                <div className="content">
                     {
                         projects && projects.map(project => (
                             <Smallcards name={project.project_name} key={project.id}/>
                         ))
                     }
 
-                </ul>
+                </div>
                 <div className="bottom_section">
                     <span>Status: {status}</span>
                 </div>
