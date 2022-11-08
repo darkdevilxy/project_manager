@@ -1,5 +1,4 @@
-import { query } from 'firebase/database';
-import { addDoc, collection, doc,deleteDoc, getDoc, getFirestore, where } from 'firebase/firestore';
+import { collection, doc,deleteDoc, getFirestore } from 'firebase/firestore';
 import { useFirestoreCollectionData } from 'reactfire';
 
 import './sidebar.css'

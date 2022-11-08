@@ -5,6 +5,7 @@
     right: 0;
     bottom: 0;
     width: 100%;
+    background-color: rgba(128, 128, 128, 0.6);
 
 
 }
@@ -19,7 +20,7 @@
     overflow: hidden;
     border: 1px solid darkgray;
     border-radius: 5%;
-    background-color: gray;
+    background-color: white;
     gap: 1%;
 
 }
@@ -31,18 +32,23 @@
 
 }
 
-.form > *, .project_name {
-    background-color: darkgray;
-    border: 1px solid gray;
+.form > *{
+    background-color: rgba(169,169,169,  0.5);
+    border: none;
     margin: 2%;
     padding: 3%;
-    border-radius: 3%;
+}
+
+.form > .project_description{
+    border-radius: 0% 0% 3% 3%;
 }
 
 .title_bar{
-    background-color: purple;
+    background-color: whitesmoke;
+    border-bottom: 1px solid darkgray;
     display: flex;
     padding: 2%;
+    align-items: center;
 }
 
 .close{
@@ -52,6 +58,8 @@
     margin-left: auto;
 }
 .create{
-    margin-bottom: auto;
+    margin-bottom: 0px;
     padding: 3%;
+    border: none;
+    border-top: 1px solid darkgray
 }

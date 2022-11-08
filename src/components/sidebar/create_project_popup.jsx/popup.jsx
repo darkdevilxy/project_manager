@@ -13,7 +13,10 @@ export default function Popup({ status, database }) {
     }
 
     async function create_record() {
-        project_name ? await addDoc(database, { project_name: project_name }) : alert("Project Name Cannot Be empty")
+        project_name ? await addDoc(database, {
+            project_name: project_name,
+            project_description: project_description
+        }) : alert("Project Name Cannot Be empty")
         close_dialog()
 
     }
@@ -27,10 +30,10 @@ export default function Popup({ status, database }) {
                         <label htmlFor="title">Create New Project</label>
                         <button onClick={close_dialog} className="close">&times;</button>
                     </div>
-                    <form className='form'>
-                        <input value={project_name} onChange={(e) => set_project_name(e.target.value)} type="text" className="project_name" />
-                        <textarea value={project_description} onChange={(e) => set_project_name(e.target.value)} name="project_description" id="project_description" cols="30" rows="10"></textarea>
-                    </form>
+                    <section className='form'>
+                        <input value={project_name} onChange={(e) =>  set_project_name(e.target.value)} type="text" className="project_name" />
+                        <textarea value={project_description} onChange={(e) => set_project_description(e.target.value)} className="project_description" id="project_description" cols="30" rows="10"></textarea>
+                    </section>
                     <button onClick={create_record} className="create">Create</button>
                 </div>
             </section>
