@@ -1,36 +1,47 @@
-.sidebar{
+.sidebar
+{
     margin: 0;
     padding: 0;
-    background-color:  rgba(214, 189, 189, 0.8);
+    background-color: rgba(214, 189, 189, 0.8);
+    height: 100vh
 }
-.header{
-    background-color: blue;
+.header
+{
+    background-color: rgba(214, 189, 189, 0.9);
     text-align: center;
     font-size: 1.5em;
-    padding: 0 1.5em 0 1.5em;
+    padding: 0.2em 1.5em;
+    border-bottom: 1px solid darkgray;
 
 }
-.top_section{
+.top_section
+{
     display: flex;
-    justify-content: center;
+    justify-content: baseline;
     align-items: center;
     gap: 2em;
-    background-color: red;
+    background-color: rgba(210, 184, 184, 0.936);
+    padding: 0.17em 1.5em 0;
+    border-bottom: 1px solid darkgray;
 }
-.top_section > button {
-    background-color: green;
+.top_section > button
+{
+    background-color: transparent;
     border: none;
+
 }
-.top_section>button>img{
+.top_section > button > img
+{
+    height: 1.5em;
+    width: 1.5em;
 }
-.content{
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    background-color: pink;
+.content
+{
+    margin: 1em 0 0;
 }
-.bottom_section{
-text-align: center;
-background-color: yellow;
+.bottom_section
+{
+    text-align: center;
+    position: fixed;
+    bottom: 0;
 }
