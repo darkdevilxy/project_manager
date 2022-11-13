@@ -16,3 +16,17 @@ img {
     height: 2em;
     width: 2em;
 }
+.search{
+
+}
+.search_bar{
+    width:5%;
+    border: none;
+    border-radius: 2em;
+    padding: 1em;
+    transition: all 0.5s ease;
+}
+.search_bar:focus, .search_bar:hover{
+    outline: none;
+    width: 100%;
+}

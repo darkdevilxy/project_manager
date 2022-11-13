@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
 
-import {FirebaseAppProvider, FirestoreProvider, useFirebaseApp} from 'reactfire';
-import {getFirestore} from 'firebase/firestore';
+import {FirebaseAppProvider, FirestoreProvider,AuthProvider, useFirebaseApp} from 'reactfire';
+import {getFirestore, connectFirestoreEmulator} from 'firebase/firestore';
+import { connectAuthEmulator, getAuth, sendPasswordResetEmail } from 'firebase/auth';
 
 const firebaseConfig = {
     apiKey: "AIzaSyCZsBibeagK2mGIDlVYmcNplk9myV6JvCY",
@@ -26,9 +27,13 @@ ReactDOM.createRoot(document.getElementById('root')).render (
 
 function Load_modules() {
     const firestore = getFirestore(useFirebaseApp());
+    const auth = getAuth(useFirebaseApp());
+
     return (
         <FirestoreProvider sdk={firestore}>
+            <AuthProvider sdk={auth}>
             <App/>
+            </AuthProvider>
         </FirestoreProvider>
     )
 }
