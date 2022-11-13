@@ -15,18 +15,38 @@
 img {
     height: 2em;
     width: 2em;
+    transition: scale 0.5s ease;
+}
+
+img:hover {
+    scale: 1.2;
+    filter: invert(30%);
 }
 .search{
 
 }
 .search_bar{
-    width:5%;
+    background-image: url('./../../assets/search.svg');
+    background-repeat: no-repeat;
+    background-position: 7px 7px;
+    background-size: 20px 20px;
+    backdrop-filter: invert(30%);
+    text-align: center;
+    color: transparent;
+    width:1.2em;
     border: none;
     border-radius: 2em;
-    padding: 1em;
+    padding: 0.7em;
+    background-color: transparent;
     transition: all 0.5s ease;
 }
 .search_bar:focus, .search_bar:hover{
     outline: none;
     width: 100%;
+    background-color: rgb(190, 198, 205);
+    color: rgb(91, 80, 80);
+}
+.left_section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
