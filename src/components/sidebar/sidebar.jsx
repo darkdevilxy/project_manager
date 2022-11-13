@@ -3,8 +3,6 @@ import { useFirestoreCollectionData } from 'reactfire';
 
 import edit from './../../assets/edit.svg'
 import add from './../../assets/plus.svg'
-import edit_unfilled from './../../assets/pencil_unfilled.svg'
-import add_unfilled from './../../assets/add_not_filled.svg'
 
 import './sidebar.css'
 
@@ -19,9 +17,6 @@ export default function Sidebar() {
     const db_ref = collection( getFirestore(), 'projects' );
     const { status, data: projects } = useFirestoreCollectionData( db_ref, { idField: 'id' } );
     const [popup_state, set_popup_state] = useState( false )
-
-    const [edit_icon, set_edit_icon] = useState( edit )
-    const [add_icon, set_add_icon] = useState( add )
 
     function create_record() {
         set_popup_state( () => !popup_state )
@@ -39,28 +34,16 @@ export default function Sidebar() {
                     Projects
                 </div>
                 <div className="top_section">
-                    <button onMouseOver={
-                            () => set_add_icon( add_unfilled )
-                        }
-                        onMouseLeave={
-                            () => set_add_icon( add )
-                        }
-                        onClick={create_record}
+                    <button onClick={create_record}
                         className="new">
-                        <img src={add_icon}
+                        <img src={add}
                             alt="Add"/>
                     </button>
-                    <button onMouseOver={
-                            () => set_edit_icon( edit_unfilled )
-                        }
-                        onMouseLeave={
-                            () => set_edit_icon( edit )
-                        }
-                        onClick={
+                    <button onClick={
                             () => delete_record( "Test2" )
                         }
                         className="edit">
-                        <img src={edit_icon}
+                        <img src={edit}
                             alt=""/>
                     </button>
                 </div>
