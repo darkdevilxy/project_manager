@@ -28,11 +28,6 @@ ReactDOM.createRoot(document.getElementById('root')).render (
 function Load_modules() {
     const firestore = getFirestore(useFirebaseApp());
     const auth = getAuth(useFirebaseApp());
-    
-    if (process.env.NODE_ENV !== 'production') {
-        // Set up emulators
-        console.log("Emulator mode")
-      }
 
     return (
         <FirestoreProvider sdk={firestore}>

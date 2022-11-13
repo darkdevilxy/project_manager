@@ -1,8 +1,8 @@
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth'
-import { useUser } from 'reactfire';
+
+import { ProfilePhoto } from './profile_photo/profile_photo';
 
 import logo from './../../assets/home.svg'
-import user from './../../assets/user (1).svg'
 import './navbar.css'
 
 export function Navbar() {
@@ -23,7 +23,7 @@ export function Navbar() {
                 <input className='search_bar' type="text" />
             </div>
             <div onClick={authenticate_user} className="user">
-                <img src={user} alt="user" />
+                <ProfilePhoto />
             </div>
         </nav>
     )

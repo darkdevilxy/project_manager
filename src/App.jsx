@@ -3,14 +3,8 @@ import { Navbar } from "./components/navbar/navbar";
 import { Mainbody } from "./components/main_body/main_body";
 
 import './App.css'
-import { useAuth, useSigninCheck, useUser } from "reactfire";
-import { useState } from "react";
-import { updateCurrentUser } from "firebase/auth";
-
 
 export default function App() {
-
-    const {status, data:sign_in_check} = useSigninCheck();
 
     return (
         <>
@@ -19,7 +13,7 @@ export default function App() {
                     <Navbar />
                 </div>
                 <main className="main_content">
-                    {(()=> typeof sign_in_check.signedIn != "undefined") && <Sidebar />}
+                    <Sidebar />
                     <Mainbody/>
                 </main>
             </div>
