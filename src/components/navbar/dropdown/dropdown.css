@@ -1,0 +1,22 @@
+.dropdown_container {
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  top: 0;
+  translate: 0 50%;
+  background-color: rgb(222, 202, 202, 1);
+  overflow: hidden;
+  padding-top: 4px;
+}
+
+.dropdown_container > button {
+  padding: 1em 5em 1em 5em;
+  border: none;
+  background-color: inherit;
+  transition: all 0.5s ease;
+}
+
+button:hover {
+  background-color: #f5f5f5;
+  border-radius: 1em;
+}
