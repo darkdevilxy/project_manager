@@ -1,0 +1,105 @@
+<!-- Using "." to add Class Name to an Element. -->
+<!-- div.class_name
+    Expands to  -->
+
+<div class="class_name"></div>
+
+<!-- Using "#" to add ID to and Element -->
+<!-- div#id
+ Expands to  -->
+
+<div id="id"></div>
+
+<!-- Using ">" for child elements -->
+<!-- main>section>article>div
+Expands to  -->
+
+<main>
+  <section>
+    <article>
+      <div></div>
+    </article>
+  </section>
+</main>
+
+<!-- Using "+" for sibling elements -->
+<!-- header+main+footer
+ Expands to  -->
+
+<header>
+
+</header>
+<main>
+
+</main>
+<footer>
+
+</footer>
+
+<!-- Using "*" you can create multiple of same elements -->
+<!-- body>main>div*2
+ Expands to -->
+
+<body>
+    <main>
+        <div></div>
+        <div></div>
+    </main>
+</body>
+
+<!-- Same thing but with classes -->
+<!-- body>main>div*3
+ Expands to -->
+
+<body>
+    <main>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </main>
+</body>
+
+<!-- Using "{}" to add content inside an element -->
+<!-- body>p{Some Texts}>b{Bold Text}+u{Underlined Text}
+ Expands to  -->
+
+<body>
+    <p>
+        Some Texts
+        <b>Bold Text</b>
+        <u>Underlined Text</u>
+    </p>
+</body>
+
+<!-- Using "$" to create numbered classes -->
+<!-- main>div.box$*3
+ Expands to  -->
+<main>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</main>
+
+<!-- Using "$" to create numbered IDs -->
+<!-- main>div#box$*3
+ Expands to  -->
+
+ <main>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+ </main>
+
+<!-- main>h1{Title}+article>div.content$*5{Content$}
+ Expands to -->
+
+ <main>
+    <h1>Title</h1>
+    <article>
+        <div class="content1">Content1</div>
+        <div class="content2">Content2</div>
+        <div class="content3">Content3</div>
+        <div class="content4">Content4</div>
+        <div class="content5">Content5</div>
+    </article>
+ </main>
