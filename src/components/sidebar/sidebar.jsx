@@ -9,6 +9,7 @@ import './sidebar.css'
 import Smallcards from './small_cards/small_cards';
 import Popup from './create_project_popup.jsx/popup';
 import { useState } from 'react';
+import React from 'react';
 
 
 export default function Sidebar() {
@@ -36,14 +37,14 @@ export default function Sidebar() {
                 <div className="top_section">
                     <button onClick={create_record}
                         className="new">
-                        <img src={add}
+                        <img className='top_section_button' src={add}
                             alt="Add"/>
                     </button>
                     <button onClick={
                             () => delete_record( "Test2" )
                         }
                         className="edit">
-                        <img src={edit}
+                        <img className='top_section_button' src={edit}
                             alt=""/>
                     </button>
                 </div>

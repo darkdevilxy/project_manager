@@ -1,6 +1,7 @@
 import Sidebar from "./components/sidebar/sidebar";
 import { Navbar } from "./components/navbar/navbar";
 import { Mainbody } from "./components/main_body/main_body";
+import React from "react";
 
 import './App.css'
 

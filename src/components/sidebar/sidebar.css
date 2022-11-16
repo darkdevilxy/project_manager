@@ -26,16 +26,16 @@
 }
 .top_section > button
 {
-    background-color: transparent;
+    background-color:  rgba(210, 184, 184, 0.936);
     border: none;
 
 }
-.top_section > button > img
+.top_section_button
 {
     height: 1.5em;
     width: 1.5em;
 }
-.top_section > button> img:hover
+.top_section_button:hover
 {
     transform: scale(1.2);
     transition: all 0.3s ease;
