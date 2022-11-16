@@ -4,7 +4,6 @@ import React from "react";
 import { ProfilePhoto } from "./profile_photo/profile_photo";
 import DropDown from "./dropdown/dropdown";
 
-import home from "./../../assets/home.svg";
 import hamburger from "./../../assets/hamburger.svg";
 
 import "./navbar.css";
@@ -21,7 +20,6 @@ export function Navbar() {
     <nav className="navbar">
       <div className="left_section">
         <img src={hamburger} alt="" className="hamburger_menu" />
-        <img src={home} alt="logo" />
       </div>
       <div className="search">
         <input

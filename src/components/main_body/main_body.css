@@ -1,0 +1,4 @@
+.main_body{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+}
